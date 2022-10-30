@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class WildCard {
-
   public static void main(String[] args) {
 
     //так работать не будет

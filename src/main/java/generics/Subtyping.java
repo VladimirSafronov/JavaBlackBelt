@@ -1,7 +1,6 @@
 package generics;
 
 public class Subtyping {
-
   public static void main(String[] args) {
 
     //String не является наследником Number
