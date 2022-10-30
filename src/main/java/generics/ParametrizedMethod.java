@@ -23,6 +23,7 @@ public class ParametrizedMethod {
 }
 
 class GenericMethod {
+
   public static <T> T getSecondElement(List<T> arr) {
     return arr.get(1);
   }
