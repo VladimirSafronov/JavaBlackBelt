@@ -1,6 +1,7 @@
 package generics;
 
 public class ParametrizedClass {
+
   public static void main(String[] args) {
     Info<String> info1 = new Info<>("word");
     System.out.println(info1);

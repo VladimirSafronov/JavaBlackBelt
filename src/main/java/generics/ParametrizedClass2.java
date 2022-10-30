@@ -16,6 +16,7 @@ public class ParametrizedClass2 {
         " , second value - " + pair3.getValue2());
   }
 }
+
 class Pair <V1, V2> {
   private V1 value1;
   private V2 value2;
