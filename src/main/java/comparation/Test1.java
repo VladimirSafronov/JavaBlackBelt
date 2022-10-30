@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Test1 {
-
   public static void main(String[] args) {
     Employee emp1 = new Employee(11, "Zaur", "Tregulov", 1234);
     Employee emp2 = new Employee(5, "Ivan", "Sidorov", 12434);
