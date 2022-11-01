@@ -26,7 +26,6 @@ public class TreeSetEx2 {
     System.out.println(treeSet.tailSet(st6)); //выведет все элементы данного и выше (3,4,5курс)
     Student st7 = new Student("Ivan", 4);
     System.out.println(treeSet.subSet(st6, st7)); //выведет все элементы между данными эл-тами
-
     System.out.println(st4.equals(st6));
     System.out.println(st6.hashCode() == st4.hashCode());
   }

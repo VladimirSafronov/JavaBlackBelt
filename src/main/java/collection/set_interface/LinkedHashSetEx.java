@@ -3,7 +3,6 @@ package collection.set_interface;
 import java.util.LinkedHashSet;
 
 public class LinkedHashSetEx {
-
   public static void main(String[] args) {
     LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
     lhs.add(5);
