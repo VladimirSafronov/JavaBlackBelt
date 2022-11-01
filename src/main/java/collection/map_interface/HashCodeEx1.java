@@ -2,6 +2,7 @@ package collection.map_interface;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
 
 public class HashCodeEx1 {
@@ -16,20 +17,31 @@ public class HashCodeEx1 {
     map.put(st3, 6.8);
     System.out.println(map);
 
-    Student st4 = new Student("Zaur", "Tregulov", 3);
-    boolean result = map.containsKey(st4);
-    System.out.println("result = " + result);
-//    System.out.println(st1.equals(st4));
-    System.out.println(st1.hashCode());
-    System.out.println(st2.hashCode());
+//    Student st4 = new Student("Zaur", "Tregulov", 3);
+//    boolean result = map.containsKey(st4);
+//    System.out.println("result = " + result);
+////    System.out.println(st1.equals(st4));
+//    System.out.println(st1.hashCode());
+//    System.out.println(st2.hashCode());
+//
+//    for (Entry<Student, Double> entry : map.entrySet()) {
+//      System.out.println("key = " + entry.getKey() + " , value = " + entry.getValue());
+//    }
 
+    System.out.println(st1.hashCode());
+    Student st4 = new Student("Zaur", "Tregulov", 3);
+//    st1.course = 4;
+    System.out.println(map.containsKey(st4));
+    System.out.println(st1.hashCode());
+
+    Map<String, Double> map2 = new HashMap<>(16, 0.75f);
   }
 }
 
-class Student {
-  String name;
-  String surName;
-  int course;
+final class Student {
+  private final String name;
+  private final String surName;
+  private final int course;
 
   public Student(String name, String surName, int course) {
     this.name = name;
@@ -44,6 +56,18 @@ class Student {
         ", surName='" + surName + '\'' +
         ", course=" + course +
         '}';
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getSurName() {
+    return surName;
+  }
+
+  public int getCourse() {
+    return course;
   }
 
   @Override
