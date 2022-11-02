@@ -1,6 +1,6 @@
-package nested_classes;
+package static_nested_class;
 
-import nested_classes.Car.Engine;
+import static_nested_class.Car.Engine;
 
 public class Car {
 
