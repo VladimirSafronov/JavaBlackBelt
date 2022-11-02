@@ -1,6 +1,4 @@
-package inner_class;
-
-import inner_class.Car.Engine;
+package nested_classes.inner_class;
 
 public class Car {
   String color;
