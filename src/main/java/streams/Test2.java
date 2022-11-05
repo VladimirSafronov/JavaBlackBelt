@@ -19,14 +19,41 @@ public class Test2 {
     students.add(st4);
     students.add(st5);
 
-    students = students.stream()
-        .filter( s -> s.getAge() > 22 && s.getAvgGrade() < 7.5)
+    List<Student> students2 = students.stream()
+        .filter(s -> s.getAge() > 22 && s.getAvgGrade() < 7.5)
         .collect(Collectors.toList());
-    System.out.println(students);
+//    System.out.println(students2);
+
+    List<Student> sortedStudents = students.stream()
+        .sorted((s1, s2) -> {
+          if (s1.getAvgGrade() > s2.getAvgGrade()) {
+            return 1;
+          } else if (s1.getAvgGrade() == s2.getAvgGrade()) {
+            return 0;
+          } else {
+            return -1;
+          }
+        }).collect(Collectors.toList());
+//    System.out.println(sortedStudents);
+
+    students.stream()
+        .filter( st -> st.getSex() == 'f')
+        .map(st -> {st.setName(st.getName().toUpperCase()); return st;})
+        .sorted( (s1, s2) -> {
+          if (s1.getAge() > s2.getAge()) {
+            return 1;
+          } else if (s1.getAge() < s2.getAge()) {
+            return -1;
+          } else {
+            return 0;
+          }
+        })
+        .forEach(System.out::println);
   }
 }
 
 class Student {
+
   private String name;
   private char sex;
   private int age;
