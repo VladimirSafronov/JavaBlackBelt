@@ -22,7 +22,7 @@ public class Test2 {
     List<Student> students2 = students.stream()
         .filter(s -> s.getAge() > 22 && s.getAvgGrade() < 7.5)
         .collect(Collectors.toList());
-//    System.out.println(students2);
+    System.out.println(students2);
 
     List<Student> sortedStudents = students.stream()
         .sorted((s1, s2) -> {
@@ -36,19 +36,24 @@ public class Test2 {
         }).collect(Collectors.toList());
 //    System.out.println(sortedStudents);
 
-    students.stream()
-        .filter( st -> st.getSex() == 'f')
-        .map(st -> {st.setName(st.getName().toUpperCase()); return st;})
-        .sorted( (s1, s2) -> {
-          if (s1.getAge() > s2.getAge()) {
-            return 1;
-          } else if (s1.getAge() < s2.getAge()) {
-            return -1;
-          } else {
-            return 0;
-          }
-        })
-        .forEach(System.out::println);
+//    students.stream()
+//        .filter( st -> st.getSex() == 'f')
+//        .map(st -> {st.setName(st.getName().toUpperCase()); return st;})
+//        .sorted( (s1, s2) -> {
+//          if (s1.getAge() > s2.getAge()) {
+//            return 1;
+//          } else if (s1.getAge() < s2.getAge()) {
+//            return -1;
+//          } else {
+//            return 0;
+//          }
+//        })
+//        .forEach(System.out::println);
+
+    Student first = students.stream()
+        .filter(s -> s.getAge() > 22 && s.getAvgGrade() < 7.5)
+        .findFirst().get();
+    System.out.println(first);
   }
 }
 
