@@ -2,6 +2,7 @@ package streams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Test9 {
 
@@ -30,6 +31,10 @@ public class Test9 {
 //    students.stream().filter( el -> el.getCourse() > 1).limit(2).forEach(System.out::println);
 //    System.out.println("_______________________");
 //    students.stream().filter( el -> el.getCourse() > 1).skip(2).forEach(System.out::println);
+
+    List<Integer> cources = students.stream().mapToInt(el -> el.getCourse())
+        .boxed().collect(Collectors.toList());
+    System.out.println(cources);
 
     int totalAge = students.stream().mapToInt(el -> el.getAge()).sum();
     System.out.println("Total students age is " + totalAge);
