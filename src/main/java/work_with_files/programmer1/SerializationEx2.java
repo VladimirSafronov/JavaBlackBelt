@@ -9,8 +9,9 @@ public class SerializationEx2 {
 
   public static void main(String[] args) {
     Car car = new Car("Lada", "white");
-    Employee emp1 = new Employee("Maria", "IT", 25, 500, car);
-    try(ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("employees2.bin"))) {
+    Employee emp1 = new Employee("Maria", "Zaharova", "IT", 25, 500, car);
+    try (ObjectOutputStream output = new ObjectOutputStream(
+        new FileOutputStream("employees2.bin"))) {
       output.writeObject(emp1);
       System.out.println("Done!");
     } catch (IOException e) {
