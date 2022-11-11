@@ -31,6 +31,23 @@ public class ChannelBufferEx1 {
       }
       System.out.println(stix);
 
+      String text = "\nWilliam Shakespeare was born in the town of Stratford, England, in the year 1564. "
+          + "When he was a young man, Shakespeare moved to the city of London, where he began writing "
+          + "plays. His plays were soon very successful, and were enjoyed both by the common people "
+          + "of London and also by the rich and famous.";
+//      //создаем новый буффер определенной длины
+//      ByteBuffer buffer2 = ByteBuffer.allocate(text.getBytes().length);
+//      //записываем в буффер
+//      buffer2.put(text.getBytes());
+//      //переводим в режим чтения
+//      buffer2.flip();
+//      //записываем информацию в channel
+//      channel.write(buffer2);
+
+      //более элегантный вариант записи в файл
+      ByteBuffer buffer2 = ByteBuffer.wrap(text.getBytes());
+      channel.write(buffer2);
+
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
