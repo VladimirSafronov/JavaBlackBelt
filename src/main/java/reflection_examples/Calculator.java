@@ -33,7 +33,6 @@ public class Calculator {
 }
 
 class TestCalculator {
-
   public static void main(String[] args) {
 
     try (Scanner scanner = new Scanner(new FileReader(new File("test100.txt")))) {
