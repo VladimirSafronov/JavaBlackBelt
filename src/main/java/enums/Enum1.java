@@ -14,7 +14,6 @@ public class Enum1 {
     WeekDay[] allDays = WeekDay.values();
     System.out.println(Arrays.toString(allDays));
   }
-
 }
 
 enum WeekDay {
