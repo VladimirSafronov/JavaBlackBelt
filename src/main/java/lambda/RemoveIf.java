@@ -19,3 +19,11 @@ public class RemoveIf {
     System.out.println(list);
   }
 }
+
+class RemoveIf2 {
+  public static void main(String[] args) {
+    List<Integer> list2 = new ArrayList<>(List.of(99, 11, 3, 45, 1, 8));
+    list2.removeIf( i -> i > 10);
+    System.out.println(list2);
+  }
+}
